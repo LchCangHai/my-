@@ -1,0 +1,92 @@
+<!--<img id="myAvatar" src="https://pic.cnblogs.com/avatar/1710879/20201106133303.png">-->
+<!--<div id="myShowSider" >
+</div>-->
+<div>
+    <a href="https://github.com/LchCangHai" target="_blank" style="position: absolute;right: 0;  top: 0; z-index: 100;">
+        <img src="https://images.cnblogs.com/cnblogs_com/lincanghai/1920349/o_210126142428o_git-right-link.gif" alt="Fork me on github">
+    </a>
+    </div>
+    <script type="text/javascript">
+    document.getElementById('blogLogo').src = 'https://images.cnblogs.com/cnblogs_com/lincanghai/1920349/o_210122081842IMG_7769(20201007-221826).JPG';
+    </script>
+    
+    <!--角落萝莉-->
+    <script type="text/javascript" charset="utf-8" async="" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+    <!--背景-->
+    <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    
+    
+    
+    <!-- 火箭js-->
+    <div style="display: none;" id="rocket-to-top">
+        <div style="opacity:0;display: block;" class="level-2"></div>
+        <div class="level-3"></div>
+    </div>
+    <script type="text/javascript">
+        // jQuery火箭图标返回顶部代码
+        $(function() {
+            var e = $("#rocket-to-top"),
+            t = $(document).scrollTop(),
+            n,
+            r,
+            i = !0;
+            $(window).scroll(function() {
+                //只监听博客详情页面
+                if($("#post_detail").length == 0 ){
+                    return ;
+                }
+                var t = $(document).scrollTop();
+                t == 0 ? e.css("background-position") == "0px 0px" ? e.fadeOut("slow") : i && (i = !1, $(".level-2").css("opacity", 1), e.delay(100).animate({
+                    marginTop: "-1000px"
+                },
+                "normal",
+                function() {
+                    e.css({
+                        "margin-top": "-125px",
+                        display: "none"
+                    }),
+                    i = !0
+                })) : e.fadeIn("slow")
+            }),
+            e.hover(function() {
+                $(".level-2").stop(!0).animate({
+                    opacity: 1
+                })
+            },
+            function() {
+                $(".level-2").stop(!0).animate({
+                    opacity: 0
+                })
+            }),
+            $(".level-3").click(function() {
+                            //tip.msg("火箭发射~~");
+                function t() {
+                    var t = e.css("background-position");
+                    if (e.css("display") == "none" || i == 0) {
+                        clearInterval(n),
+                        e.css("background-position", "0px 0px");
+                        return
+                    }
+                    switch (t){
+                    case "0px 0px":
+                        e.css("background-position", "-298px 0px");
+                        break;
+                    case "-298px 0px":
+                        e.css("background-position", "-447px 0px");
+                        break;
+                    case "-447px 0px":
+                        e.css("background-position", "-596px 0px");
+                        break;
+                    case "-596px 0px":
+                        e.css("background-position", "-745px 0px");
+                        break;
+                    case "-745px 0px":
+                        e.css("background-position", "-298px 0px");
+                    }
+                }
+                if (!i) return;
+                n = setInterval(t, 50),
+                $("html,body").animate({scrollTop: 0},"slow");
+            });
+        });
+    </script>

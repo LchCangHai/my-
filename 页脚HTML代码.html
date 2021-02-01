@@ -1,0 +1,124 @@
+<div id="myFooter">
+    <div>
+        Copyright © 2021 LinCangHai
+        <br />
+        Powered by .NET 5.0 on Kubernetes
+    </div>
+</div>
+
+<script type="text/javascript">
+/* 鼠标特效 */
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("❤富强❤","❤民主❤","❤文明❤","❤和谐❤","❤自由❤","❤平等❤","❤公正❤","❤法治❤","❤爱国❤","❤敬业❤","❤诚信❤","❤友善❤");
+        var $i = $("<span></span>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 10000,
+            "top": y - 15 ,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://blog-static.cnblogs.com/files/elkyo/OwO.min.css" />
+<script src="https://blog-static.cnblogs.com/files/elkyo/OwO.min.js"></script>
+<script>
+/*文章评论*/
+var le = $(".feedbackItem").length
+for(var i = 0;i < le;i++){
+  var src = $(".feedbackItem").eq(i).find(".feedbackCon").find("span").text()
+  $(".feedbackCon").eq(i).prepend('<img class="comment-avatar" src="'+$.trim(src)+'">')
+}
+$("#tbCommentBody").attr("placeholder","请乖乖填写哦！ ...")
+$("#tbCommentBody").after('<div class="OwO" οnclick="load_face(this)"><div class="OwO-logo"><span>OωO<space><space>表情</span></div></div>')
+var load_face = function(a){
+  var OwO_demo = new OwO({
+      logo: 'OωO表情',
+      container: document.getElementsByClassName('OwO')[0],
+      target: document.getElementById('tbCommentBody'),
+      api: 'https://miluluyo.github.io/OwO.json',
+      position: 'down',
+      width: '70%',
+      maxHeight: '250px'
+  });
+  a.classList.add('OwO-open');
+  a.onclick=null
+}
+$("#commentbox_opt").nextAll().remove()
+$("#btn_comment_submit").val("提交评论 (Ctrl + Enter)")
+</script>
+
+
+<!-- 右下角live2d效果 -->
+<script type="text/javascript">
+setTimeout(() => {
+        L2Dwidget.init({
+                "model": {
+                        "scale": 0.5
+                },
+                "display": {
+                        "position": "left",
+                        "width": 80,
+                        "height": 115,
+                        "hOffset": 0,
+                        "vOffset": -20
+                },
+                "mobile": {
+                        "show": true,
+                        "scale": 0.5
+                },
+                "react": {
+                        "opacityDefault": 0.7,
+                        "opacityOnHover": 0.2
+                }
+        });
+}, 1000)
+</script>
+
+
+<!--图片放大
+<script src="https://blog-static.cnblogs.com/files/lincanghai/transition.js"></script>
+<script src="https://blog-static.cnblogs.com/files/lincanghai/zoom.js"></script>
+<link rel="stylesheet" type="text/css" href="https://blog-static.cnblogs.com/files/lincanghai/zoom.css" />
+然后给要放大的图片标签添加 data-action="zoom" 属性：
+<script type='text/javascript'>$('#cnblogs_post_body img').attr('data-action', 'zoom');</script>
+-->
+
+
+<!-- lightbox的样式 -->
+<link href="https://blog-static.cnblogs.com/files/lincanghai/lightbox.css" rel="stylesheet">
+
+<!-- lightbox.js核心代码 -->
+<script src="https://blog-static.cnblogs.com/files/lincanghai/lightbox-plus-jquery.js"></script>
+<script type='text/javascript'>$('#cnblogs_post_body img').wrap(function(){return "<a href='"+$(this).attr("src")+"' data-lightbox='example-set'></a>"});</script>
+<script type='text/javascript'>$(".code_img_closed").unwrap();</script>
+<script type='text/javascript'>$(".code_img_opened").unwrap();</script>
+
+
+
+<script src="https://blog-static.cnblogs.com/files/lincanghai/index.js"></script>
+
+
+
+
+
